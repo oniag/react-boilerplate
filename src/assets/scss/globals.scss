@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+
+  --clr-blue: blue;
+  --clr-red: red;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  color: (--clr-blue);
+  font-weight: (--fw-400);
+}
