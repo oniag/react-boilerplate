@@ -1,4 +1,4 @@
 export interface IExample {
-  id: number
-  name: string
+  id: number;
+  name: string;
 }
