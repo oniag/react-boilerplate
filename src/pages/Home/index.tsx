@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import InputMask from 'react-input-mask';
 
 // interface
 import { IExample } from '../../interfaces/example';
@@ -7,13 +8,18 @@ import { IExample } from '../../interfaces/example';
 import './styles.scss';
 
 const Home = () => {
-  const [state, setState] = useState<IExample>({id: 10, name: ''});
+  const [form, setForm] = useState<Partial<IExample>>({});
 
   return (
     <>
-      Home
+      <br/>
+      <input type="text" onChange={e => setForm({...form, name: e.target.value })} /><br/>
+      <InputMask onChange={e => setForm({...form, phone: e.target.value })} mask="(99) 99999-9999" />
+      <div>Name: {form.name}</div>
+      <div>Celular: {form.phone}</div>
+      <br/>
     </>
   )
-}
+};
 
 export default Home;
