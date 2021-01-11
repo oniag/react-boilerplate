@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 import InputMask from 'react-input-mask';
 
 // interface
@@ -10,6 +11,9 @@ import './styles.scss';
 const Home = () => {
   const [form, setForm] = useState<Partial<IExample>>({});
 
+  const notify = () => toast.success("Wow so easy !");
+
+
   return (
     <>
       <br/>
@@ -17,6 +21,7 @@ const Home = () => {
       <InputMask onChange={e => setForm({...form, phone: e.target.value })} mask="(99) 99999-9999" />
       <div>Name: {form.name}</div>
       <div>Celular: {form.phone}</div>
+      <button onClick={notify}>Notify !</button>
       <br/>
     </>
   )
