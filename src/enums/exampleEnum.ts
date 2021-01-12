@@ -1,4 +1,6 @@
-export enum StatusEnum {
-  Desativado = 0,
-  Ativado = 1
-};
+enum StatusEnum {
+  Active = 0,
+  Disabled = 1
+}
+
+export default StatusEnum;
